@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="app自动化" verbose="1" preserve-order="true" parallel="false">
+  <listeners>
+    <listener class-name="util.TestNGListener"/>
+  </listeners>
+  <test name="学生上课"  >
+    <classes>
+      <class name="testcases.TestStudentClass">
+      </class>
+    </classes>
+  </test>
+  <test name="查看订单详情页">
+    <classes>
+      <class name="testcases.TestMyOrder">
+      </class>
+    </classes>
+  </test>
+
+
+
+  <!--<listeners>-->
+  <!--<listener class-name="com.qa.report.ExtentTestNGReporterListener"></listener>-->
+  <!--</listeners>-->
+</suite>
+
+
