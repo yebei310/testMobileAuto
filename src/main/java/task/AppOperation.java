@@ -16,6 +16,12 @@ import org.slf4j.LoggerFactory;
 import testcases.TestStudentClass;
 
 public  class AppOperation {
+
+
+
+
+
+
     private Logger log = Logger.getLogger(AppOperation.class);
     // 打开app弹框选择年级
     public   void selectGrade() throws Exception{
