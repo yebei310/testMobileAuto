@@ -1,1 +1,0 @@
-{"uuid":"198fb536-39e3-44ee-b38a-52e95d16e81b","name":"testcases.TestMyOrder.setUp","description":"","start":1587120333441,"stop":1587120345160,"children":["5eb130dc-0cf3-4a67-b39b-11cf95a3ec1e"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","start":1587120333441,"stop":1587120345160}]}

@@ -1,0 +1,74 @@
+2020-04-20 17:27:53.444 [DEBUG] org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+2020-04-20 17:27:53.453 [DEBUG] org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2020-04-20 17:27:53.455 [DEBUG] org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://0.0.0.0:4723][total kept alive: 0; route allocated: 0 of 2000; total allocated: 0 of 2000]
+2020-04-20 17:27:53.464 [DEBUG] org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {}->http://0.0.0.0:4723][total kept alive: 0; route allocated: 1 of 2000; total allocated: 1 of 2000]
+2020-04-20 17:27:53.465 [DEBUG] org.apache.http.impl.execchain.MainClientExec - Opening connection {}->http://0.0.0.0:4723
+2020-04-20 17:27:53.467 [DEBUG] org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connecting to /0.0.0.0:4723
+2020-04-20 17:27:53.472 [DEBUG] org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.5.32:64870<->0.0.0.0:4723
+2020-04-20 17:27:53.472 [DEBUG] org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-0: set socket timeout to 10800000
+2020-04-20 17:27:53.473 [DEBUG] org.apache.http.impl.execchain.MainClientExec - Executing request POST /wd/hub/session HTTP/1.1
+2020-04-20 17:27:53.473 [DEBUG] org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+2020-04-20 17:27:53.473 [DEBUG] org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+2020-04-20 17:27:53.475 [DEBUG] org.apache.http.headers - http-outgoing-0 >> POST /wd/hub/session HTTP/1.1
+2020-04-20 17:27:53.475 [DEBUG] org.apache.http.headers - http-outgoing-0 >> Content-Type: application/json; charset=utf-8
+2020-04-20 17:27:53.475 [DEBUG] org.apache.http.headers - http-outgoing-0 >> Content-Length: 698
+2020-04-20 17:27:53.475 [DEBUG] org.apache.http.headers - http-outgoing-0 >> Host: 0.0.0.0:4723
+2020-04-20 17:27:53.475 [DEBUG] org.apache.http.headers - http-outgoing-0 >> Connection: Keep-Alive
+2020-04-20 17:27:53.475 [DEBUG] org.apache.http.headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_201)
+2020-04-20 17:27:53.475 [DEBUG] org.apache.http.headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2020-04-20 17:27:53.475 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "POST /wd/hub/session HTTP/1.1[\r][\n]"
+2020-04-20 17:27:53.475 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+2020-04-20 17:27:53.475 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "Content-Length: 698[\r][\n]"
+2020-04-20 17:27:53.475 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "Host: 0.0.0.0:4723[\r][\n]"
+2020-04-20 17:27:53.475 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2020-04-20 17:27:53.475 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_201)[\r][\n]"
+2020-04-20 17:27:53.475 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2020-04-20 17:27:53.475 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "[\r][\n]"
+2020-04-20 17:27:53.475 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "{[\n]"
+2020-04-20 17:27:53.476 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "  "desiredCapabilities": {[\n]"
+2020-04-20 17:27:53.476 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "    "appPackage": "com.pxwx.student",[\n]"
+2020-04-20 17:27:53.476 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "    "appActivity": ".ui.activity.SplashActivity",[\n]"
+2020-04-20 17:27:53.476 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "    "platformVersion": "7.0",[\n]"
+2020-04-20 17:27:53.476 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "    "automationName": "uiautomator2",[\n]"
+2020-04-20 17:27:53.476 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "    "platformName": "Android",[\n]"
+2020-04-20 17:27:53.476 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "    "deviceName": "03157df38af71a05"[\n]"
+2020-04-20 17:27:53.476 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "  },[\n]"
+2020-04-20 17:27:53.476 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "  "requiredCapabilities": {},[\n]"
+2020-04-20 17:27:53.476 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "  "capabilities": {[\n]"
+2020-04-20 17:27:53.476 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "    "desiredCapabilities": {[\n]"
+2020-04-20 17:27:53.476 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "      "appPackage": "com.pxwx.student",[\n]"
+2020-04-20 17:27:53.476 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "      "appActivity": ".ui.activity.SplashActivity",[\n]"
+2020-04-20 17:27:53.476 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "      "platformVersion": "7.0",[\n]"
+2020-04-20 17:27:53.476 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "      "automationName": "uiautomator2",[\n]"
+2020-04-20 17:27:53.476 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "      "platformName": "Android",[\n]"
+2020-04-20 17:27:53.476 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "      "deviceName": "03157df38af71a05"[\n]"
+2020-04-20 17:27:53.476 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "    },[\n]"
+2020-04-20 17:27:53.476 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "    "requiredCapabilities": {},[\n]"
+2020-04-20 17:27:53.476 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "    "alwaysMatch": {[\n]"
+2020-04-20 17:27:53.477 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "      "platformName": "Android"[\n]"
+2020-04-20 17:27:53.477 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "    },[\n]"
+2020-04-20 17:27:53.477 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "    "firstMatch": [][\n]"
+2020-04-20 17:27:53.477 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "  }[\n]"
+2020-04-20 17:27:53.477 [DEBUG] org.apache.http.wire - http-outgoing-0 >> "}"
+2020-04-20 17:28:09.716 [DEBUG] org.apache.http.wire - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+2020-04-20 17:28:09.717 [DEBUG] org.apache.http.wire - http-outgoing-0 << "X-Powered-By: Express[\r][\n]"
+2020-04-20 17:28:09.717 [DEBUG] org.apache.http.wire - http-outgoing-0 << "Vary: X-HTTP-Method-Override[\r][\n]"
+2020-04-20 17:28:09.717 [DEBUG] org.apache.http.wire - http-outgoing-0 << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2020-04-20 17:28:09.717 [DEBUG] org.apache.http.wire - http-outgoing-0 << "Content-Length: 924[\r][\n]"
+2020-04-20 17:28:09.717 [DEBUG] org.apache.http.wire - http-outgoing-0 << "ETag: W/"39c-9yYLY3FcyqqvqwW6raJ/ZOTzGPA"[\r][\n]"
+2020-04-20 17:28:09.717 [DEBUG] org.apache.http.wire - http-outgoing-0 << "Date: Mon, 20 Apr 2020 09:28:09 GMT[\r][\n]"
+2020-04-20 17:28:09.717 [DEBUG] org.apache.http.wire - http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+2020-04-20 17:28:09.717 [DEBUG] org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+2020-04-20 17:28:09.717 [DEBUG] org.apache.http.wire - http-outgoing-0 << "{"value":{"capabilities":{"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"Android","appPackage":"com.pxwx.student","appActivity":".ui.activity.SplashActivity","platformVersion":"7.0","automationName":"uiautomator2","deviceName":"03157df38af71a05"},"platformName":"Android","appPackage":"com.pxwx.student","appActivity":".ui.activity.SplashActivity","platformVersion":"7.0","automationName":"uiautomator2","deviceName":"03157df38af71a05","deviceUDID":"03157df38af71a05","deviceApiLevel":24,"deviceScreenSize":"1440x2560","deviceScreenDensity":640,"deviceModel":"SM-G9200","deviceManufacturer":"samsung","pixelRatio":4,"statBarHeight":96,"viewportRect":{"left":0,"top":96,"width":1440,"height":2464}},"sessionId":"f774b9b0-cdb7-4b22-b195-c7ff8781f6d5"}}"
+2020-04-20 17:28:09.721 [DEBUG] org.apache.http.headers - http-outgoing-0 << HTTP/1.1 200 OK
+2020-04-20 17:28:09.721 [DEBUG] org.apache.http.headers - http-outgoing-0 << X-Powered-By: Express
+2020-04-20 17:28:09.721 [DEBUG] org.apache.http.headers - http-outgoing-0 << Vary: X-HTTP-Method-Override
+2020-04-20 17:28:09.721 [DEBUG] org.apache.http.headers - http-outgoing-0 << Content-Type: application/json; charset=utf-8
+2020-04-20 17:28:09.721 [DEBUG] org.apache.http.headers - http-outgoing-0 << Content-Length: 924
+2020-04-20 17:28:09.721 [DEBUG] org.apache.http.headers - http-outgoing-0 << ETag: W/"39c-9yYLY3FcyqqvqwW6raJ/ZOTzGPA"
+2020-04-20 17:28:09.721 [DEBUG] org.apache.http.headers - http-outgoing-0 << Date: Mon, 20 Apr 2020 09:28:09 GMT
+2020-04-20 17:28:09.721 [DEBUG] org.apache.http.headers - http-outgoing-0 << Connection: keep-alive
+2020-04-20 17:28:09.725 [DEBUG] org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+2020-04-20 17:28:09.729 [DEBUG] org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 0][route: {}->http://0.0.0.0:4723] can be kept alive indefinitely
+2020-04-20 17:28:09.729 [DEBUG] org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-0: set socket timeout to 0
+2020-04-20 17:28:09.729 [DEBUG] org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {}->http://0.0.0.0:4723][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]

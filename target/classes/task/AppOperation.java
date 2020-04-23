@@ -14,16 +14,26 @@ import static testcases.TestStudentClass.androidDriver;
 import io.appium.java_client.AppiumDriver;
 import org.slf4j.LoggerFactory;
 import testcases.TestStudentClass;
+import util.exitOrNot;
 
 public  class AppOperation {
+
+
+
+
+
+
     private Logger log = Logger.getLogger(AppOperation.class);
+    exitOrNot checkElement = new exitOrNot();
     // 打开app弹框选择年级
     public   void selectGrade() throws Exception{
         try {
             Thread.sleep(3000);
             WebElement wb =androidDriver.findElementByXPath("//android.support.v7.widget.RecyclerView[@resource-id='com.pxwx.student:id/rv_grade']/android.widget.LinearLayout[9]");
             androidDriver.tap(1, wb, 500);
-            log.info("选择年级suceess");
+            log.info("log选择年级suceess");
+            System.out.println("选择年级suceess");
+
             androidDriver.findElementByXPath("//android.widget.TextView[@resource-id='com.pxwx.student:id/btn_right']").click();
             Thread.sleep(3000);
         }catch (Exception e){
@@ -38,6 +48,7 @@ public  class AppOperation {
     public  void  login()throws Exception {
         try {
             //跳转密码登录页面
+            System.out.println("跳转登录页面");
             androidDriver.findElementByXPath("//android.widget.RadioButton[@resource-id='com.pxwx.student:id/main_tab_user']").click();
             Thread.sleep(2000);
             androidDriver.findElement(By.xpath("//android.widget.TextView[@resource-id='com.pxwx.student:id/loginfragment_password_login_view']")).click();
@@ -71,15 +82,14 @@ public  class AppOperation {
             if (!title.isEmpty()) {
                 if (title.contains("我的课程")) {
 //                System.out.printf("进入学习模块，获取到title：" + title);
-                    log.info("进入学习模块，获取到title：" + title);
-                    log.info("进入学习模块，获取到title：" + title);
+                    log.info("log登录成功，进入学习模块，获取到title：" + title);
+                    System.out.println("登录成功，进入学习模块，获取到title：" + title);
                     Assert.assertTrue(true);
                 } else {
                     System.out.printf("学习模块异常，请查看" + title);
                     Assert.assertTrue(false);
                 }
             }
-
         }catch (Exception e){
             getDriver();
             e.printStackTrace();
@@ -88,34 +98,41 @@ public  class AppOperation {
     }
     //学生端上课模块
     public  void gotoClass() {
-        try {
-            androidDriver.findElementByXPath("//android.widget.TextView[@resource-id='com.pxwx.student:id/live_status' and @text='去上课']").click();
-            Thread.sleep(10000);
-            getTap(androidDriver, 1500, 1000);
-            getTap(androidDriver, 1200, 1000);
-            getTap(androidDriver, 1500, 1150);
-            androidDriver.findElementByXPath("//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.FrameLayout[2]/android.widget.RelativeLayout[1]/android.widget.FrameLayout[2]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.widget.ImageView[1]").click();
-            Thread.sleep(40000);
-            androidDriver.findElementByXPath("//android.widget.TextView[@text='老师棒棒哒']").click();
-            Thread.sleep(3000);
-            String as = androidDriver.findElementByXPath("//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.FrameLayout[2]/android.widget.RelativeLayout[1]/android.widget.FrameLayout[2]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout[1]/android.widget.TextView[1]").getText();
-            System.out.printf(as);
-            if (!as.isEmpty()) {
-                if (as.contains("我：老师棒棒哒")) {
-                    System.out.printf("快捷发布成功");
-                    Assert.assertTrue(true);
-                } else {
-                    System.out.printf("快捷发布失败");
-                    Assert.assertTrue(false);
+
+        By seletor =new By.ByXPath("//android.widget.TextView[@resource-id='com.pxwx.student:id/live_status' and @text='去上课']");
+        if (checkElement.check(androidDriver,seletor)){
+            try {
+                androidDriver.findElementByXPath("//android.widget.TextView[@resource-id='com.pxwx.student:id/live_status' and @text='去上课']").click();
+                Thread.sleep(10000);
+                getTap(androidDriver, 1500, 1000);
+                getTap(androidDriver, 1200, 1000);
+                getTap(androidDriver, 1500, 1150);
+                androidDriver.findElementByXPath("//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.FrameLayout[2]/android.widget.RelativeLayout[1]/android.widget.FrameLayout[2]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.widget.ImageView[1]").click();
+                Thread.sleep(40000);
+                androidDriver.findElementByXPath("//android.widget.TextView[@text='老师棒棒哒']").click();
+                Thread.sleep(3000);
+                String as = androidDriver.findElementByXPath("//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.FrameLayout[2]/android.widget.RelativeLayout[1]/android.widget.FrameLayout[2]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout[1]/android.widget.TextView[1]").getText();
+                System.out.printf(as);
+                if (!as.isEmpty()) {
+                    if (as.contains("我：老师棒棒哒")) {
+                        System.out.printf("快捷发布成功");
+                        Assert.assertTrue(true);
+                    } else {
+                        System.out.printf("快捷发布失败");
+                        Assert.assertTrue(false);
+                    }
                 }
+                androidDriver.pressKeyCode(AndroidKeyCode.KEYCODE_BACK);
+                androidDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+                androidDriver.findElementByXPath("//android.widget.TextView[@resource-id='com.pxwx.student:id/md_buttonDefaultPositive' and @text='退出']").click();
+            }catch (Exception e){
+                getDriver();
+                e.printStackTrace();
+                Assert.assertTrue(false);
             }
-            androidDriver.pressKeyCode(AndroidKeyCode.KEYCODE_BACK);
-            androidDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-            androidDriver.findElementByXPath("//android.widget.TextView[@resource-id='com.pxwx.student:id/md_buttonDefaultPositive' and @text='退出']").click();
-        }catch (Exception e){
-            getDriver();
-            e.printStackTrace();
-            Assert.assertTrue(false);
+        }else {
+            System.out.println("当前没有待上课课次。。。");
+
         }
     }
 

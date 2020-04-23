@@ -1,6 +1,7 @@
 package task;
 
 import io.appium.java_client.android.AndroidDriver;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import util.TestBase;
@@ -9,6 +10,7 @@ import static testcases.TestStudentClass.androidDriver;
 import java.net.URL;
 
 public class AppiumConf extends TestBase {
+    private Logger log = Logger.getLogger(AppiumConf.class);
     TestBase testBase=new TestBase();
     String deviceName = prop.getProperty("deviceName");
     String platformName = prop.getProperty("platformName");
@@ -34,5 +36,7 @@ public class AppiumConf extends TestBase {
         desiredCapabilities.setCapability("automationName", automationName);
         //2.创建驱动...URL是appium的固定地址；指定appium通讯的地址，将相对应的配置传入到驱动里边
         androidDriver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), desiredCapabilities);
+        log.info("log 初始化app配置");
+        System.out.printf("初始化app配置");
     }
 }

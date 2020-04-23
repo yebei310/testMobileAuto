@@ -1,0 +1,1 @@
+{"uuid":"ade3f9da-ced2-4dc4-b104-f10e3ff88d72","name":"testcases.TestStudentClass.setUp","description":"","start":1587641755707,"stop":1587641770090,"children":["eae23002-fbb2-45c1-8586-aed6ab66dbbd"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","start":1587641755708,"stop":1587641770089}]}
